@@ -7,9 +7,9 @@ void main() {
         backgroundColor: Colors.red,
         appBar: AppBar(
           title: Text('Dicee'),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.redAccent,
         ),
-        body: DicePage(),
+        body: SafeArea(child: DicePage()),
       ),
     ),
   );
@@ -18,6 +18,21 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Container(
+        margin: EdgeInsets.all(16),
+        child: Row(
+          children: [
+            Expanded(
+              child: Image.asset('images/dice2.png'),
+            ),
+            SizedBox(width: 16),
+            Expanded(
+              child: Image.asset('images/dice6.png'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

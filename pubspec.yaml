@@ -1,5 +1,5 @@
 name: dicee
-description: A new Flutter application.
+description: The Complete Flutter Development Bootcamp with Dart
 
 version: 1.0.0+1
 
@@ -17,8 +17,7 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
 
   assets:
-  - images/
+    - images/
