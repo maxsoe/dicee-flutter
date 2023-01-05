@@ -34,13 +34,14 @@ class _DicePageState extends State<DicePage> {
           children: [
             Expanded(
               child: TextButton(
-                child: Image.asset("images/dice${dice1.toString()}.png"),
+                child: Image.asset('images/dice$dice1.png'),
                 onPressed: () {
                   debugPrint(
-                      'Left dice pressed. Before setting state dice1 was $dice1');
+                      'Left die pressed. Before: D1 was $dice1, D2 was $dice2');
                   setState(() {
                     dice1 = Random().nextInt(6) + 1;
-                    debugPrint("In setState, dice1 is $dice1");
+                    dice2 = Random().nextInt(6) + 1;
+                    debugPrint("In D1 setState: D1 is $dice1, D2 is $dice2");
                   });
                 },
               ),
@@ -48,13 +49,14 @@ class _DicePageState extends State<DicePage> {
             SizedBox(width: 16),
             Expanded(
               child: TextButton(
-                child: Image.asset("images/dice${dice2.toString()}.png"),
+                child: Image.asset('images/dice$dice2.png'),
                 onPressed: () {
                   debugPrint(
-                      'Left dice pressed. Before setting state dice2 was $dice2');
+                      'Right die pressed. Before: D1 was $dice1, D2 was $dice2');
                   setState(() {
+                    dice1 = Random().nextInt(6) + 1;
                     dice2 = Random().nextInt(6) + 1;
-                    debugPrint("In setState, dice2 is $dice2");
+                    debugPrint("In D2 setState: D1 is $dice1, D2 is $dice2");
                   });
                 },
               ),
