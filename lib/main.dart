@@ -24,11 +24,21 @@ class DicePage extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Image.asset('images/dice2.png'),
+              child: TextButton(
+                child: Image.asset('images/dice2.png'),
+                onPressed: () {
+                  debugPrint('Left dice pressed');
+                },
+              ),
             ),
             SizedBox(width: 16),
             Expanded(
-              child: Image.asset('images/dice6.png'),
+              child: TextButton(
+                child: Image.asset('images/dice6.png'),
+                onPressed: () {
+                  debugPrint('Right dice pressed');
+                },
+              ),
             ),
           ],
         ),
