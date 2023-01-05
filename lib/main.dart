@@ -39,7 +39,7 @@ class _DicePageState extends State<DicePage> {
                   debugPrint(
                       'Left dice pressed. Before setting state dice1 was $dice1');
                   setState(() {
-                    dice1 = Random().nextInt(5) + 1;
+                    dice1 = Random().nextInt(6) + 1;
                     debugPrint("In setState, dice1 is $dice1");
                   });
                 },
@@ -53,7 +53,7 @@ class _DicePageState extends State<DicePage> {
                   debugPrint(
                       'Left dice pressed. Before setting state dice2 was $dice2');
                   setState(() {
-                    dice2 = Random().nextInt(5) + 1;
+                    dice2 = Random().nextInt(6) + 1;
                     debugPrint("In setState, dice2 is $dice2");
                   });
                 },
